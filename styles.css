@@ -1,0 +1,740 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Splash Screen Styles */
+.splash-screen {
+    background-color: #003366; /* Deep blue background */
+    height: 100vh; /* Full-screen height */
+    display: flex; /* Use Flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.splash-screen .logo {
+    width: 300px; /* Adjust the size of your logo */
+    transition: transform 0.3s, opacity 0.3s; /* Hover effect */
+    cursor: pointer;
+}
+
+.splash-screen .logo:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    opacity: 0.9;
+}
+
+.splash-screen .enter-site {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Top Banner */
+.top-banner {
+    background: linear-gradient(to right, #003366, #d71920); /* Blue to Red Gradient */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.top-banner .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.top-banner .nav-links {
+    display: flex;
+    gap: 2rem; /* Adjust spacing between links */
+}
+
+.top-banner .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+.top-banner .nav-links a:hover {
+    opacity: 0.7;
+}
+
+.nav-links .active {
+    color: #ffa500; /* Highlighted color (orange) */
+    font-weight: bold;
+    text-decoration: underline; /* Optional: adds an underline */
+}
+
+/* Latest Update Section */
+.latest-update {
+    background-color: #e6e6e6; /* Light gray */
+    padding: 2rem;
+    text-align: center;
+}
+
+.latest-update h1 {
+    color: #d71920; /* Sky Sports red */
+    margin-bottom: 1rem;
+}
+
+.update-preview {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin: auto;
+    max-width: 600px;
+}
+
+.update-preview h2 {
+    color: #0056c7;
+    margin-bottom: 0.5rem;
+}
+
+.update-preview p {
+    margin-bottom: 1rem;
+}
+
+.read-more-btn {
+    background-color: #d71920;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.read-more-btn:hover {
+    background-color: #b2161a;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* Section Headings */
+.brible-content h1, .brible-content h2, .brible-content h3 {
+    color: #0056c7; /* Blue for headings */
+    margin-bottom: 1rem;
+}
+
+/* Section Paragraphs */
+.brible-content p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* Lists */
+.brible-content ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.brible-content ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Highlight Important Text */
+.brible-content strong {
+    color: #d71920; /* Red for emphasis */
+}
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    text-align: left;
+    background-color: #f4f4f4;
+}
+
+thead {
+    background-color: #0056c7; /* Blue Header */
+    color: white;
+}
+
+th, td {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+th {
+    font-weight: bold;
+}
+/* General centering for the main content */
+.brible-content {
+    text-align: center; /* Centers all text on the page */
+    margin: 0 auto;
+    max-width: 800px; /* Optional: Limits the width for better readability */
+}
+
+/* Section Styling */
+.brible-content section {
+    background: linear-gradient(to bottom, #f4f4f4, #eaeaea); /* Light gradient */
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 8px; /* Optional: Adds rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for pop-out effect */
+}
+
+/* Section Headings */
+.brible-content section h2 {
+    color: #0056c7; /* Blue heading color */
+    margin-bottom: 1rem;
+}
+
+/* Paragraph and Lists */
+.brible-content p,
+.brible-content ul {
+    margin-bottom: 1rem;
+    line-height: 1.6; /* Improves readability */
+    text-align: center; /* Ensures list items and paragraphs are centered */
+}
+
+/* List Items */
+.brible-content ul {
+    list-style: none; /* Removes default bullets */
+    padding: 0;
+}
+
+.brible-content ul li::before {
+    content: "•"; /* Adds custom bullet */
+    color: #d71920; /* Red bullet color */
+    margin-right: 0.5rem;
+}
+/* Season Link */
+.season-link {
+    text-decoration: none;
+    color: #0056c7; /* Blue color for link */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.season-link:hover {
+    color: #d71920; /* Red color on hover */
+    text-decoration: underline;
+}
+/* General Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background-color: #f9f9f9;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: #0056c7; /* Blue header background */
+    color: white; /* White text for header */
+}
+
+th, td {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+}
+
+/* Default Row Styling */
+tbody tr:nth-child(odd) {
+    background-color: #ffffff; /* White for odd rows */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f4f4f4; /* Light gray for even rows */
+}
+
+/* Position-Based Row Colors */
+tbody tr:nth-child(1) { /* 1st position - bright green */
+    background-color: #4CAF50; /* Bright green */
+    color: white; /* White text for contrast */
+    font-weight: bold;
+}
+
+tbody tr:nth-child(2),
+tbody tr:nth-child(3),
+tbody tr:nth-child(4) { /* 2nd, 3rd, 4th positions - slightly duller green */
+    background-color: #6BBF59; /* Slightly duller green */
+    color: white;
+}
+
+tbody tr:nth-child(5),
+tbody tr:nth-child(6) { /* 5th, 6th positions - even duller green */
+    background-color: #9ACD6D; /* Duller green */
+    color: white;
+}
+
+tbody tr:nth-child(7) { /* 7th position - yellowish green */
+    background-color: #C6E377; /* Yellowish green */
+    color: black; /* Black text for better readability */
+}
+
+tbody tr:nth-child(16),
+tbody tr:nth-child(17),
+tbody tr:nth-child(18) { /* 16th, 17th, 18th positions - red for relegation */
+    background-color: #E57373; /* Red */
+    color: white;
+    font-weight: bold;
+}
+/* Three-Column Layout for Top 3 Teams */
+.top-three-container {
+    display: flex;
+    justify-content: space-around; /* Evenly space the columns */
+    align-items: center; /* Vertically center content */
+    margin: 2rem auto;
+    max-width: 800px; /* Limit the width */
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 1rem;
+    border: 1px solid #ddd; /* Light border for separation */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.top-team {
+    flex: 1; /* Equal width for all columns */
+    text-align: center;
+    margin: 0 1rem; /* Space between columns */
+}
+
+.top-team h2 {
+    font-size: 1.5rem;
+    color: #0056c7; /* Blue for position text */
+    margin-bottom: 0.5rem;
+}
+
+.top-team p {
+    font-size: 1.2rem;
+    margin: 0.2rem 0;
+    color: #333; /* Dark gray text for readability */
+}
+
+/* For Smaller Screens */
+@media (max-width: 600px) {
+    .top-three-container {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: flex-start; /* Align content to the left */
+    }
+    .top-team {
+        text-align: left;
+        margin: 1rem 0; /* Space between stacked columns */
+    }
+}
+/* Season Overview Container */
+.season-overview {
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 1.5rem; /* Padding around the section */
+    margin: 2rem auto; /* Center and add vertical spacing */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Center the title and content */
+}
+
+/* Season Title */
+.season-overview h1 {
+    margin-bottom: 1rem; /* Space between the title and the table */
+    font-size: 2rem;
+    color: #0056c7; /* Blue color for the title */
+}
+
+/* Three-Column Layout (Same as Before) */
+.top-three-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.top-team {
+    flex: 1;
+    text-align: center;
+    margin: 0 1rem;
+}
+
+.top-team h2 {
+    font-size: 1.5rem;
+    color: #0056c7;
+    margin-bottom: 0.5rem;
+}
+
+.top-team p {
+    font-size: 1.2rem;
+    margin: 0.2rem 0;
+    color: #333;
+}
+
+/* Responsive Design (For Smaller Screens) */
+@media (max-width: 600px) {
+    .top-three-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .top-team {
+        text-align: left;
+        margin: 1rem 0;
+    }
+}
+/* Story Content Styling */
+.story-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #f9f9f9; /* Light gray background */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: left; /* Align story text to the left */
+}
+
+.story-content h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #0056c7; /* Blue color for heading */
+}
+
+.story-content p {
+    font-size: 1.2rem;
+    line-height: 1.6; /* Improve readability */
+    margin-bottom: 1rem;
+}
+
+/* Back Button Styling */
+.back-button {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    background-color: #0056c7; /* Blue background */
+    color: white; /* White text */
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #003f94; /* Darker blue on hover */
+}
+/* Styling for the Latest Update Section */
+.latest-update .update-preview {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Space between the image and the text */
+    flex-direction: row-reverse; /* Swap the order to place the image on the left */
+}
+
+.update-content {
+    flex: 1; /* Make the content take up the remaining space */
+}
+
+.update-image img {
+    max-width: 300px; /* Adjust image width */
+    max-height: 200px; /* Adjust image height */
+    object-fit: cover; /* Crop image nicely */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+/* Story Content Styling */
+.story-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.story-content h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #0056c7;
+}
+
+.story-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Inline Images */
+.story-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.story-section p {
+    flex: 2;
+}
+
+.story-image {
+    flex: 1;
+    max-width: 200px; /* Restrict image size */
+}
+
+.story-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Align Images */
+.story-image.left {
+    order: -1; /* Move the image before the paragraph */
+}
+
+.story-image.right {
+    order: 1; /* Move the image after the paragraph */
+}
+
+/* Back Button Styling */
+.back-button {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    background-color: #0056c7;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #003f94;
+}
+/* Author Info Section for Full Story Page */
+.author-info {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ddd; /* Subtle divider above author info */
+    text-align: left; /* Align the author info to the left */
+    font-size: 1rem; /* Adjust font size for readability */
+    color: #555; /* Light gray text */
+}
+
+.author-info strong {
+    color: #0056c7; /* Blue for emphasis */
+}
+
+/* Small Text on Latest Update Section */
+.small-text {
+    font-size: 0.9rem; /* Smaller text */
+    color: #888; /* Light gray text */
+    margin-top: 0.5rem;
+    font-style: italic; /* Optional: makes the text italic */
+}
+/* Sponsor Section Styling */
+.sponsor-section {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #f9f9f9; /* Light gray background */
+    border-top: 1px solid #ddd; /* Subtle border above the section */
+    margin-top: 2rem; /* Space above the section */
+}
+
+.sponsor-section h2 {
+    font-size: 1.5rem;
+    color: #0056c7; /* Blue color for the heading */
+    margin-bottom: 1rem;
+}
+
+.sponsor-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; /* Space between logos */
+    flex-wrap: wrap; /* Wrap logos to a new row on smaller screens */
+}
+
+.sponsor-logos img {
+    max-width: 150px; /* Set a consistent size for all sponsor logos */
+    max-height: 100px;
+    object-fit: contain; /* Preserve aspect ratio of logos */
+    border: 1px solid #ddd; /* Optional: Add a border around logos */
+    border-radius: 8px; /* Optional: Rounded corners */
+    padding: 0.5rem;
+    background-color: white; /* Optional: White background for logos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .sponsor-logos img {
+        max-width: 120px; /* Reduce logo size on smaller screens */
+        max-height: 80px;
+    }
+}
+.story {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+/* HUGE Story Styling */
+.huge-story {
+    background-color: #fffae6; /* Light yellow background */
+    border: 2px solid #ffd700; /* Gold border for emphasis */
+    box-shadow: 0 6px 8px rgba(255, 215, 0, 0.3); /* Subtle golden glow */
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.huge-story h2 {
+    font-size: 1.8rem; /* Slightly larger headline */
+    color: #c70039; /* Deep red for excitement */
+    margin-bottom: 0.8rem;
+}
+
+.huge-story p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.huge-story .read-more-btn {
+    background-color: #ffd700; /* Gold background for the button */
+    color: #000; /* Black text */
+    font-weight: bold;
+}
+
+.huge-story .read-more-btn:hover {
+    background-color: #ffc107; /* Slightly darker gold */
+}
+/* Story Content Styling */
+.story-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #f9f9f9; /* Light gray background */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.story-content h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #c70039; /* Deep red for excitement */
+}
+
+.story-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+/* Quote Sections */
+.quote-section {
+    margin: 2rem 0;
+    background-color: #fff9e6; /* Light yellow background */
+    padding: 1rem;
+    border: 1px solid #ffd700; /* Gold border for emphasis */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(255, 215, 0, 0.2);
+}
+
+.quote-section h2 {
+    font-size: 1.5rem;
+    color: #c70039;
+    margin-bottom: 0.8rem;
+}
+
+.quote-section blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #555;
+    padding-left: 1rem;
+    border-left: 4px solid #ffd700;
+    margin: 0;
+}
+
+.quote-image img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Styling */
+.story-image img {
+    width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Author Info */
+.author-info {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ddd;
+    font-size: 1rem;
+    color: #888;
+    text-align: left;
+}
+
+/* Back Button Styling */
+.back-button {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    background-color: #c70039;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #900c3f;
+}
+.disclaimer {
+    font-size: 0.9rem; /* Smaller font size */
+    color: #666; /* Subtle gray color */
+    margin-top: 1rem;
+    text-align: center; /* Center-align disclaimer */
+    line-height: 1.4;
+    font-style: italic;
+}
+.update-preview.huge-story .small-text {
+    font-size: 0.9rem; /* Maintain the small-text style */
+    color: #888; /* Light gray text */
+    margin-top: 0.5rem;
+    font-style: italic;
+}

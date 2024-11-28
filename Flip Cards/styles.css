@@ -1,0 +1,167 @@
+/* Flip Card Container */
+.flip-card {
+    perspective: 1000px; /* Enables 3D flip effect */
+    cursor: pointer;
+    position: relative; /* Required for z-index adjustments */
+}
+
+/* Inner Container */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.6s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+/* Front and Back */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden; /* Hides the back side when not visible */
+    border-radius: 12px; /* Rounded corners */
+    display: flex;
+    flex-direction: column; /* Stacks content vertically */
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1.5rem; /* Add extra horizontal padding */
+    box-sizing: border-box; /* Prevent padding from affecting size */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    min-height: 150px; /* Set a minimum height */
+}
+
+/* Front Card Styling */
+.flip-card-front {
+    background: linear-gradient(135deg, #0056c7, #3a8dfc); /* Smooth gradient */
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Back Card Styling */
+.flip-card-back {
+    background: #ffffff; /* Clean white */
+    color: #333;
+    transform: rotateY(180deg);
+    padding: 1.5rem; /* Increased padding for content */
+    text-align: left; /* Align content properly */
+    border: 1px solid #ddd;
+    line-height: 1.6; /* Better readability */
+    font-size: 1rem;
+    box-sizing: border-box;
+    height: auto; /* Automatically adjust height to fit content */
+}
+
+/* Flipping Effect */
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+/* Grid Layout */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Responsive card grid */
+            gap: 30px; /* Space between cards */
+            padding: 20px;
+        }
+
+        /* Flip Card Container */
+        .flip-card {
+            perspective: 1000px; /* Enables 3D flip effect */
+            margin: 0 auto;
+            width: 350px; /* Set consistent width */
+            height: 250px; /* Set consistent height */
+            cursor: pointer;
+            position: relative; /* Required for z-index adjustments */
+        }
+
+        /* Inner Container */
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s ease-in-out;
+            transform-style: preserve-3d;
+        }
+
+        /* Front and Back */
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden; /* Hides the back side when not visible */
+            border-radius: 12px; /* Rounded corners */
+            display: flex;
+            flex-direction: column; /* Stacks content vertically */
+            justify-content: center;
+            align-items: center;
+            padding: 1rem 1.5rem; /* Add extra horizontal padding */
+            box-sizing: border-box; /* Prevent padding from affecting size */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+        }
+
+        /* Front Card Styling */
+        .flip-card-front {
+            background: linear-gradient(135deg, #0056c7, #3a8dfc); /* Smooth gradient */
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        /* Back Card Styling */
+        .flip-card-back {
+            background: #ffffff; /* Clean white */
+            color: #333;
+            transform: rotateY(180deg);
+            padding: 1.5rem; /* Increased padding for content */
+            text-align: left; /* Align content properly */
+            border: 1px solid #ddd;
+            line-height: 1.6; /* Better readability */
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        /* Bullet Point Styling */
+        .flip-card-back ul {
+            margin: 0;
+            padding: 0;
+            list-style: disc;
+            list-style-position: inside;
+        }
+
+        .flip-card-back li {
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .flip-card-back strong {
+            color: #0056c7; /* Highlighted key terms */
+            font-weight: bold;
+        }
+
+        /* Center Title on Back */
+        .flip-card-back h2 {
+            margin-bottom: 1rem;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #0056c7; /* Match the theme */
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Flipping Effect */
+        .flip-card.flipped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        /* Ensure Flipped Cards Overlap Properly */
+        .flip-card.flipped {
+            z-index: 10; /* Bring flipped card to the front */
+        }

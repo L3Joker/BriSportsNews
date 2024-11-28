@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinning Wheel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .wheel-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh; /* 90% of the viewport height */
+            margin: 0;
+        }
+        iframe {
+            border: none;
+            width: 95vw; /* 95% of the viewport width */
+            height: 90vh; /* 90% of the viewport height */
+            max-width: 1000px; /* Optional max width */
+            max-height: 800px; /* Optional max height */
+        }
+        .note {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="wheel-container">
+        <iframe src="https://wheelofnames.com/3qh-aax" allowfullscreen></iframe>
+    </div>
+    <p class="note">This spinning wheel was created using <a href="https://wheelofnames.com" target="_blank" rel="noopener noreferrer">wheelofnames.com</a>.</p>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Test</title>
+    <style>
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* 5 cards per row */
+            gap: 15px;
+            padding: 1rem;
+        }
+        .flip-card {
+            background: lightblue;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-grid">
+    <!-- Repeat this structure for each card -->
+    <section class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h2>Player Improvement Stats</h2>
+            </div>
+            <div class="flip-card-back">
+                <h2>Player Improvement Stats</h2>
+                <p>Rules for applying player improvement stats are as follows. These stats cannot be applied to just any player but must follow these strict guidelines:</p>
+                <ul>
+                    <li><strong>Transfer Bought Players:</strong> Stats can only be applied to players purchased during the save.</li>
+                    <li><strong>Current Club Players:</strong> Includes players who were already at the club when the manager joined.</li>
+                    <li><strong>Players Obtained by Perks:</strong>
+                        <ul>
+                            <li>Applies only to players classified as <strong>EXTREMELY INTERESTED</strong>.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    </div>
+</body>
+</html>

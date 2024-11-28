@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to Brible</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login to Brible</h1>
+        <form id="login-form">
+            <label for="password">Enter Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p id="error-message" style="color: red; display: none;">Incorrect password. Try again!</p>
+    </div>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const inputPassword = document.getElementById('password').value;
+            const hashedPassword = 'a71d0544eba012d5e7fb8c4016014975'; // Example: MD5 hash of 'password'
+
+            // Hash the input password
+            const hash = md5(inputPassword); // Requires md5.js script
+
+            if (hash === hashedPassword) {
+    localStorage.setItem('authenticated', true);
+    window.location.href = 'brible.html';
+}
+
+             else {
+                document.getElementById('error-message').style.display = 'block';
+            }
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.19.0/js/md5.min.js"></script>
+</body>
+</html>

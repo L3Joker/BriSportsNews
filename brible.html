@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BriSports - Brible</title>
+	<script>
+    // Check if the user has logged in
+    if (!localStorage.getItem('authenticated')) {
+        alert('You must log in to access this page.');
+        window.location.href = 'login.html';
+    }
+</script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Banner -->
+    <header class="top-banner">
+        <div class="logo">BriSports News</div>
+        <nav class="nav-links">
+            <a href="index.html">Season Updates</a>
+            <a href="brible.html" class="active">Brible</a>
+            <a href="standings.html">Standings</a>
+            <a href="transfer-news.html">Transfer News</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="brible-content">
+        <section>
+            <h1>The Brible</h1>
+            <p>Welcome to the official rulebook and guidelines for the BriSports Network Save. Below, you will find all the commandments, milestones, and rules that govern this save. Remember: all rules are final, and breaches will incur penalties.</p>
+			<p class="disclaimer">Created by Jack Apted, James Devine, Matthew Brierley</p>
+		</section>
+
+        <section>
+            <h2>10 Commandments</h2>
+            <ul>
+                <li><strong>Club Selection:</strong> All players must use clubs with the same reputation. No moving clubs during the save.</li>
+                <li><strong>Facilities:</strong> All clubs must have maximum facilities.</li>
+                <li><strong>Staff & Players:</strong> 
+                    <ul>
+                        <li>No poaching staff from each other.</li>
+                        <li>No unsettling players unless they are already unhappy.</li>
+                    </ul>
+                </li>
+                <li><strong>Tactics:</strong> No downloading pre-made tactics.</li>
+                <li><strong>Perks:</strong>
+                    <ul>
+                        <li>Cannot double up perks (exceptions apply).</li>
+                        <li>Perks do not carry over to the next season.</li>
+                        <li>Perks may be saved for use at the end of the season.</li>
+                    </ul>
+                </li>
+                <li><strong>Finals Between Players:</strong> Cameras on, matchday attire required.</li>
+                <li><strong>Sacking Protection:</strong> Managers cannot be sacked.</li>
+                <li><strong>Disputes:</strong> All decisions resolved by the wheel. The wheel is final.</li>
+                <li><strong>Spin Order:</strong> Decided by league position in-game.</li>
+                <li><strong>The Brible is Final:</strong> All rules must be followed. Breaches result in a 10-point penalty.</li>
+            </ul>
+        </section>
+		
+		<section>
+    <h2>Player Improvement Stats</h2>
+    <p>Rules for applying player improvement stats are as follows. These stats cannot be applied to just any player and must follow these strict guidelines:</p>
+    <ul>
+        <li><strong>Transfer Bought Players:</strong> Stats can only be applied to players purchased during the save.</li>
+        <li><strong>Current Club Players:</strong> Includes players who were already at the club when the manager joined.</li>
+        <li><strong>Players Obtained by Perks:</strong> 
+            <ul>
+                <li>Applies only to players classified as <strong>EXTREMELY INTERESTED</strong>.</li>
+            </ul>
+        </li>
+		</ul>
+		</section>
+
+
+        <section>
+            <h2>Milestones</h2>
+
+            <h3>Positive Milestones</h3>
+            <ul>
+                <li><strong>Goal of the Month:</strong> Spin attribute wheel (+1 to +3 Shooting stats).</li>
+                <li><strong>Penalty Recovery:</strong>
+                    <ul>
+                        <li>If available, scoring 2 penalties removes previous lost points.</li>
+                        <li>Missed penalty points in final game apply to next season.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Negative Milestones</h3>
+            <ul>
+                <li><strong>Red Card:</strong> Spin negative attribute wheel (opponent selects, 30% chance to avoid points loss). Player gains +1 Aggression.</li>
+                <li><strong>3 Consecutive Losses:</strong> Sack Assistant Manager and best coach (opponents can claim better coaches).</li>
+                <li><strong>Missed Penalty:</strong> -1 Penalty Taking attribute and must take the next penalty awarded.</li>
+                <li><strong>Missed Penalty (Shootout):</strong> -2 Penalty Taking attribute.</li>
+            </ul>
+        </section>
+		<section>
+            <h2>Budget Wheel</h2>
+            <ul>
+                <li><strong>Cost:</strong> £25M Transfer Budget per spin.</li>
+                <li><strong>Frequency:</strong> The Budget Wheel can only be spun twice per season, and only during transfer windows.</li>
+                <li><strong>Special Rules:</strong>
+                    <ul>
+                        <li>Rolling "Spin Again" does not count as a second spin.</li>
+                        <li>If "£20M Spin Again" is rolled, it does count as a second spin.</li>
+                        <li>Landing on "Spin Jan Wheel" or "Spin Season Wheel" allows you to spin those wheels regardless of the current transfer window and is in addition to your guaranteed spins.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Derby Rules (Player vs Player)</h2>
+            <ul>
+                <li><strong>Winner:</strong> +/- 2 to any attribute for Player of the Match.</li>
+                <li><strong>Loser:</strong> Best player cannot play the first 45 minutes of the next match.</li>
+                <li><strong>Red Card:</strong> Offending player excluded from the next derby.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>End of Season Review</h2>
+            <ul>
+                <li><strong>Team of the Year Players:</strong> Spin for +/- 3 Attributes. Older players reduce age if over 28.</li>
+                <li><strong>Manager of the Year:</strong> Spin Attribute Growth Wheel twice.</li>
+                <li><strong>Cup Wins:</strong> £15m for major competitions, £5m for minor cups.</li>
+                <li><strong>Rival Finishing Above You:</strong> Spin Attribute Decay Wheel (-1 to -3).</li>
+                <li><strong>Top Performers:</strong> Attribute growth based on stats (e.g., goals, assists, clean sheets).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>First Season Setup</h2>
+            <ul>
+                <li>Equal budgets and wages for all players.</li>
+                <li>January wheel spins occur on the 1st of the month.</li>
+            </ul>
+        </section>
+		<section>
+            <h2>New Seasons</h2>
+            <p>Transfer Budgets and Wage Budgets are allocated based on player managers' positions in the league (using an F1 format). The lowest-ranked manager gets the best budget, while the highest-ranked manager gets the least. These allocations are in addition to what the board provides.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>Transfer Budget</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1st</td>
+                        <td>£20M</td>
+                    </tr>
+                    <tr>
+                        <td>2nd</td>
+                        <td>£35M</td>
+                    </tr>
+                    <tr>
+                        <td>3rd</td>
+                        <td>£50M</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><strong>Note:</strong> These positions (1st, 2nd, 3rd) refer to the standings among player managers, not the overall league table. For example, if the highest-ranked player manager is in 3rd place and the lowest is in 7th place, they are considered 1st and 3rd among player managers respectively.</p>
+        </section>
+    </main>
+<!-- Sponsor Section -->
+<section class="sponsor-section">
+    <h2>Our Sponsors</h2>
+    <div class="sponsor-logos">
+        <img src="guinness.png" alt="GUINNESS">
+        <img src="rollbit.png" alt="Sponsor 2">
+        <img src="whitegummy.png" alt="WHITE GUMMY">
+        <img src="wingfest.png" alt="WingFest">
+    </div>
+    <p class="disclaimer">
+        <strong>Disclaimer:</strong> The sponsors displayed on this website are purely fictional and included for comedic purposes only. BriSports News is not affiliated with any of these brands, and their logos and names are used in a non-commercial, satirical context. No endorsement, partnership, or sponsorship is implied. Please enjoy the humor responsibly!
+    </p>
+</section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 BriSports News | Inspired by Sky Sports</p>
+    </footer>
+</body>
+</html>
