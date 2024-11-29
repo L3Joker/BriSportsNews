@@ -148,25 +148,31 @@
 /* Media Query for Mobile Screens */
 @media (max-width: 768px) {
     .split-page {
-		display: block;
         flex-direction: column; /* Stack sections vertically */
-        gap: 2rem; /* Add spacing between sections */
+        gap: 2rem;
+        height: auto; /* Let it adjust to the content height */
     }
 
     .right-side {
-        margin: 0; /* Reset margins */
-        padding-bottom: 2rem; /* Add spacing below the dynamic content */
+        margin: 0;
+        padding-bottom: 2rem;
     }
 
     .sponsor-section {
-        margin-top: 2rem; /* Ensure spacing above sponsors section */
-        clear: both; /* Prevent any floats from affecting this section */
+        margin-top: 2rem;
+        clear: both;
+        position: relative; /* Allow natural positioning */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem; /* Add some padding for spacing */
+        background-color: #f9f9f9; /* Optional for better visual distinction */
     }
 
     .sponsor-logos {
         display: flex;
-        flex-wrap: wrap; /* Make sponsor logos responsive */
-        justify-content: center; /* Center-align logos */
-        gap: 1rem; /* Add spacing between logos */
+        flex-wrap: wrap; /* Ensure logos adjust dynamically */
+        justify-content: center;
+        gap: 1rem;
     }
 }

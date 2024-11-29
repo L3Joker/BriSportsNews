@@ -853,3 +853,8 @@ tbody tr:nth-child(18) { /* 16th, 17th, 18th positions - red for relegation */
         line-height: 1.4;
     }
 }
+@media (max-width: 768px) {
+    .sponsor-section {
+        margin-top: auto;
+    }
+}
