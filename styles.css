@@ -927,3 +927,18 @@ tbody tr:nth-child(18) { /* 16th, 17th, 18th positions - red for relegation */
         max-height: 50px;
     }
 }
+@media (max-width: 768px) {
+    /* Adjust the read-more-btn size for smaller screens */
+    .read-more-btn {
+        font-size: 0.9rem; /* Shrink the text size */
+        padding: 0.5rem 1rem; /* Adjust padding for a smaller button */
+    }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 500px) {
+    .read-more-btn {
+        font-size: 0.8rem; /* Smaller font for very small devices */
+        padding: 0.4rem 0.8rem; /* Compact padding */
+    }
+}
