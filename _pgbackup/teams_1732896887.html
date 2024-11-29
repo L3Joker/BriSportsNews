@@ -17,13 +17,17 @@
                     ☰
 </button>
                 <ul class="nav-links">
-                    <li><a href="index.html">Season Updates</a>
+                    <li>
+                        <a href="index.html">Season Updates</a>
                     </li>
-                    <li><a href="brible.html">Brible</a>
+                    <li>
+                        <a href="brible.html">Brible</a>
                     </li>
-                    <li><a href="standings.html">Standings</a>
+                    <li>
+                        <a href="standings.html">Standings</a>
                     </li>
-                    <li><a href="teams.html" class="current">Teams</a>
+                    <li>
+                        <a href="teams.html" class="current">Teams</a>
                     </li>
                 </ul>
             </nav>
@@ -31,7 +35,7 @@
         <div class="center">
             <link rel="stylesheet" href="Team Carousel/styles.css">
             <div class="info">
-                <p style="color: #ffffff; font-size: 32px;">Tap on the images or use the keyboard arrows to navigate</p>
+                <p style="color: #ffffff; font-size: 45px;">Tap on the images or use the keyboard arrows to navigate</p>
             </div>
             <div id="carousel" class="carousel" tabindex="0">
                 <div class="carousel__inner">
@@ -69,25 +73,28 @@
             <link rel="stylesheet" href="styles.css"> 
             <h2>Our Sponsors</h2> 
             <div class="sponsor-logos"> 
-                <img src="guinness.png" alt="GUINNESS" class="sponsor-logo" data-image="guinness.png">
-                <img src="rollbit.png" alt="Sponsor 2" class="sponsor-logo" data-image="rollbit.png">
-                <img src="whitegummy.png" alt="WHITE GUMMY" class="sponsor-logo" data-image="whitegummy.png">
-                <img src="wingfest.png" alt="WingFest" class="sponsor-logo" data-image="wingfest.png">
-            </div>             
-            <p class="disclaimer"> <strong>Disclaimer:</strong> The sponsors displayed on this website are purely fictional and included for comedic purposes only. BriSports News is not affiliated with any of these brands, and their logos and names are used in a non-commercial, satirical context. No endorsement, partnership, or sponsorship is implied. Please enjoy the humor responsibly! </p> 
-        </section>         
-        <!-- Modal -->
-        <div id="sponsor-modal" class="modal">
-            <div class="modal-content">
-                <img id="modal-image" src="" alt="Sponsor Image">
-            </div>
-        </div>
+        <img src="guinness.png" alt="GUINNESS" class="sponsor-logo" data-image="guinness.png">
+        <img src="rollbit.png" alt="Sponsor 2" class="sponsor-logo" data-image="rollbit.png">
+        <img src="whitegummy.png" alt="WHITE GUMMY" class="sponsor-logo" data-image="whitegummy.png">
+        <img src="wingfest.png" alt="WingFest" class="sponsor-logo" data-image="wingfest.png">
+    </div>             
+    <p class="disclaimer">
+        <strong>Disclaimer:</strong> The sponsors displayed on this website are purely fictional and included for comedic purposes only. BriSports News is not affiliated with any of these brands, and their logos and names are used in a non-commercial, satirical context. No endorsement, partnership, or sponsorship is implied. Please enjoy the humor responsibly!
+    </p> 
+</section>         
+
+<!-- Modal -->
+<div id="sponsor-modal" class="modal">
+    <div class="modal-content">
+        <img id="modal-image" src="" alt="Sponsor Image">
     </div>
-    <footer> 
-        <p>&copy; 2024 BriSports News | Inspired by Sky Sports</p> 
-    </footer>
-    <script src="Team Carousel/JS.js"></script>
-    <script>
+</div>
+</div>
+        <footer> 
+            <p>&copy; 2024 BriSports News | Inspired by Sky Sports</p> 
+        </footer>
+        <script src="Team Carousel/JS.js"></script>
+        <script>
     document.addEventListener("DOMContentLoaded", () => {
         const hamburger = document.querySelector(".hamburger");
         const navLinks = document.querySelector(".nav-links");
@@ -97,7 +104,7 @@
         });
     });
 </script>
-    <script>
+<script>
     // Get the modal and modal image
     const modal = document.getElementById('sponsor-modal');
     const modalImage = document.getElementById('modal-image');
@@ -122,4 +129,5 @@
         }
     });
 </script>
-</body> 
+    </body>     
+</html>
