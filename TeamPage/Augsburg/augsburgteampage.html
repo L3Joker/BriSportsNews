@@ -60,7 +60,15 @@
                     <h1>Team Info</h1> 
                     <p>Select a team from the carousel to see details.</p> 
                 </div>                 
-            </div>             
+            </div>
+<div id="player-stats-modal" class="modal">
+    <div class="modal-content">
+        <button id="close-modal" class="close-button">X</button>
+        <div id="player-stats-container">
+            <!-- Content from playerstats.html will be loaded here -->
+        </div>
+    </div>
+</div>			
         </div>         
         <script src="carousel.js"></script>         
         <script src="dynamic.js"></script>         
@@ -104,29 +112,48 @@
     });
 </script>
 <script>
-    // Get the modal and modal image
-    const modal = document.getElementById('sponsor-modal');
-    const modalImage = document.getElementById('modal-image');
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('player-stats-modal');
+    const modalContent = document.getElementById('player-stats-container');
+    const closeModal = document.getElementById('close-modal');
+    const dynamicContent = document.getElementById('dynamic-content'); // Parent container for dynamic content
 
-    // Get all sponsor logos
-    const sponsorLogos = document.querySelectorAll('.sponsor-logos img');
+    // Use event delegation to handle dynamically added buttons
+    dynamicContent.addEventListener('click', async (event) => {
+        if (event.target.classList.contains('player-link')) {
+            event.preventDefault(); // Prevent any default behavior
+            
+            const url = event.target.getAttribute('data-url'); // Get the data-url attribute
+            
+            try {
+                const response = await fetch(url);
+                const html = await response.text();
 
-    // Add click event to each sponsor logo
-    sponsorLogos.forEach((logo) => {
-        logo.addEventListener('click', () => {
-            const imgSrc = logo.src; // Get the image source
-            modalImage.src = imgSrc; // Set it in the modal
-            modal.style.display = 'flex'; // Show the modal
-        });
+                // Inject the fetched HTML into the modal
+                modalContent.innerHTML = html;
+
+                // Display the modal
+                modal.style.display = 'flex';
+            } catch (error) {
+                console.error('Error loading content:', error);
+                modalContent.innerHTML = '<p>Error loading player stats. Please try again later.</p>';
+                modal.style.display = 'flex';
+            }
+        }
     });
 
-    // Close the modal when clicking outside the modal content
+    // Close the modal
+    closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    // Close modal when clicking outside the content
     modal.addEventListener('click', (event) => {
-        const isClickInsideImage = event.target === modalImage;
-        if (!isClickInsideImage) {
+        if (event.target === modal) {
             modal.style.display = 'none';
         }
     });
-</script>         
+});
+</script>        
     </body>
 </html>

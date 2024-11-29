@@ -58,10 +58,10 @@ const updateDynamicContent = (index) => {
     <li><b>CAM - <a href="Yamal-stats.html" target="_blank">Lamine Yamal</a></b><br>
     This Spanish wonderkid is thriving at Augsburg, scoring 31 goals and assisting 14 times in just 65 games. His dazzling performances justify the hype and accolades he’s received.</li>
     
-    <li><b>RCAM - <a href="messi-stats.html" target="_blank">Lionel Messi</a></b><br>
+    <li>RCAM - <button class="player-link" data-url="messistats.html">Lionel Messi</button><br>
     The 8-time Ballon d’Or winner has been reborn into a 20-year-old body, unleashing chaos on defenders and rewriting his legacy for another decade.</li>
     
-    <li><b>ST - <a href="abraham-stats.html" target="_blank">Tammy Abraham</a></b><br>
+    <li><b>ST - <button class="player-link" data-url="tammystats.html">Tammy Abraham</button><br>
     Augsburg’s lethal finisher, Abraham has dominated the Bundesliga, claiming back-to-back top scorer titles with over 30 goals in each of the past two seasons. A true predator in front of goal.</li>
 	</ul>`
         },
