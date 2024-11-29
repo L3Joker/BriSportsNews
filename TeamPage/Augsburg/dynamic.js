@@ -31,31 +31,31 @@ const updateDynamicContent = (index) => {
             name: "Best Eleven",
             description: `
 				<ul>
-    <li><b>GK - <a href="neuer-stats.html" target="_blank">Manuel Neuer</a></b><br>
+    <li><b>GK - <button class="player-link" data-url="neuerstats.html">Manuel Neuer</button><br>
     After a dramatic January 2023 transfer from Bayern Munich, Neuer proved his worth with 12 clean sheets in just 18 games. Now a cornerstone for Augsburg, his 33-game performance in 24-25 with 17 clean sheets solidifies his legendary status.</li>
     
-    <li><b>LB - <a href="tsimikas-stats.html" target="_blank">Kostas Tsimikas</a></b><br>
+    <li><b>LB - <button class="player-link" data-url="tsimikasstats.html">Kostas Tsimikas</button><br>
     A £22.5m signing from Liverpool, Tsimikas delivered consistency and creativity in the 23-24 season, posting a 7.33 average match rating, scoring once, and assisting four times.</li>
     
-    <li><b>LCB - <a href="kjaer-stats.html" target="_blank">Simon Kjær</a></b><br>
+    <li><b>LCB - <button class="player-link" data-url="kjaerstats.html">Simon Kjær</button><br>
     A tactical prodigy at just 17 years old, Kjær silenced doubters with 34 solid appearances in his debut season, proving speed isn't everything when you have a footballing brain.</li>
     
-    <li><b>RCB - <a href="naldo-stats.html" target="_blank">Naldo</a></b><br>
+    <li><b>RCB - <button class="player-link" data-url="naldostats.html">Naldo</button><br>
     A Bundesliga icon reborn, Naldo brought his legendary defensive presence to Augsburg. Despite injuries limiting him to 21 games in his first season, he remains a pivotal figure when fit.</li>
     
-    <li><b>RB - <a href="maffeo-stats.html" target="_blank">Pablo Maffeo</a></b><br>
+    <li><b>RB - <button class="player-link" data-url="maffeostats.html">Pablo Maffeo</button><br>
     Signed for £7m from Mallorca in 23-24, Maffeo contributed heavily with 3 goals and 8 assists across 31 games. His stellar performances earned a lucrative £21m transfer to Barcelona in January 24-25.</li>
     
-    <li><b>LDM - <a href="berg-stats.html" target="_blank">Patrick Berg</a></b><br>
+    <li><b>LDM - <button class="player-link" data-url="bergstats.html">Patrick Berg</button><br>
     A bargain buy at £3.8m from FK Bodø/Glimt, Berg impressed with a 7.21 average rating in his debut season, providing calm and control in Augsburg’s midfield.</li>
     
-    <li><b>RDM - <a href="karazor-stats.html" target="_blank">Atakan Karazor</a></b><br>
+    <li><b>RDM - <button class="player-link" data-url="karazorstats.html">Atakan Karazor</button><br>
     A £5m acquisition from VfB Stuttgart, Karazor grew into a vital part of the midfield engine room, increasing his average match rating from 7.21 in 23-24 to 7.25 in 24-25.</li>
     
-    <li><b>LCAM - <a href="bardghji-stats.html" target="_blank">Roony Bardgji</a></b><br>
+    <li><b>LCAM - <button class="player-link" data-url="bardgjistats.html">Roony Bardgji</button><br>
     A £17m wonderkid signing, Bardghji’s raw talent shone brightly as he racked up 10 goals and 2 assists in 29 appearances, with the potential to become a world-class attacking threat.</li>
     
-    <li><b>CAM - <a href="Yamal-stats.html" target="_blank">Lamine Yamal</a></b><br>
+    <li><b>CAM - <button class="player-link" data-url="yamalstats.html">Lamine Yamal</button><br>
     This Spanish wonderkid is thriving at Augsburg, scoring 31 goals and assisting 14 times in just 65 games. His dazzling performances justify the hype and accolades he’s received.</li>
     
     <li>RCAM - <button class="player-link" data-url="messistats.html">Lionel Messi</button><br>
