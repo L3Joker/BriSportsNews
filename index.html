@@ -107,17 +107,28 @@
                 </div>                 
             </div>             
         </header>         
-        <!-- Sponsor Section -->         
-        <section class="sponsor-section"> 
-            <h2>Our Sponsors</h2> 
-            <div class="sponsor-logos"> 
-                <img src="guinness.png" alt="GUINNESS"> 
-                <img src="rollbit.png" alt="Sponsor 2"> 
-                <img src="whitegummy.png" alt="WHITE GUMMY"> 
-                <img src="wingfest.png" alt="WingFest"> 
-            </div>             
-            <p class="disclaimer"> <strong>Disclaimer:</strong> The sponsors displayed on this website are purely fictional and included for comedic purposes only. BriSports News is not affiliated with any of these brands, and their logos and names are used in a non-commercial, satirical context. No endorsement, partnership, or sponsorship is implied. Please enjoy the humor responsibly! </p> 
-        </section>         
+		<!-- Sponsor Section -->         
+<section class="sponsor-section"> 
+    <h2>Our Sponsors</h2> 
+    <div class="sponsor-logos"> 
+        <img src="guinness.png" alt="GUINNESS" class="sponsor-logo" data-image="guinness.png">
+        <img src="rollbit.png" alt="Sponsor 2" class="sponsor-logo" data-image="rollbit.png">
+        <img src="whitegummy.png" alt="WHITE GUMMY" class="sponsor-logo" data-image="whitegummy.png">
+        <img src="wingfest.png" alt="WingFest" class="sponsor-logo" data-image="wingfest.png">
+    </div>             
+    <p class="disclaimer">
+        <strong>Disclaimer:</strong> The sponsors displayed on this website are purely fictional and included for comedic purposes only. BriSports News is not affiliated with any of these brands, and their logos and names are used in a non-commercial, satirical context. No endorsement, partnership, or sponsorship is implied. Please enjoy the humor responsibly!
+    </p> 
+</section>         
+
+<!-- Modal -->
+<div id="sponsor-modal" class="modal">
+    <div class="modal-content">
+        <img id="modal-image" src="" alt="Sponsor Image">
+    </div>
+</div>
+</div>
+
         <!-- Footer -->         
         <footer> 
             <p>&copy; 2024 BriSports News | Inspired by Sky Sports</p> 
@@ -132,5 +143,31 @@
         });
     });
 </script>
+<script>
+    // Get the modal and modal image
+    const modal = document.getElementById('sponsor-modal');
+    const modalImage = document.getElementById('modal-image');
+
+    // Get all sponsor logos
+    const sponsorLogos = document.querySelectorAll('.sponsor-logos img');
+
+    // Add click event to each sponsor logo
+    sponsorLogos.forEach((logo) => {
+        logo.addEventListener('click', () => {
+            const imgSrc = logo.src; // Get the image source
+            modalImage.src = imgSrc; // Set it in the modal
+            modal.style.display = 'flex'; // Show the modal
+        });
+    });
+
+    // Close the modal when clicking outside the modal content
+    modal.addEventListener('click', (event) => {
+        const isClickInsideImage = event.target === modalImage;
+        if (!isClickInsideImage) {
+            modal.style.display = 'none';
+        }
+    });
+</script>
+
     </body>
 </html>  
