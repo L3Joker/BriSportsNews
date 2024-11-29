@@ -827,3 +827,29 @@ tbody tr:nth-child(18) { /* 16th, 17th, 18th positions - red for relegation */
         display: none;
     }
 }
+/* Responsive adjustments for sponsor section */
+@media (max-width: 768px) {
+    .sponsor-section {
+    margin-top: 2rem; /* Adds space from the previous section */
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    display: block; /* Ensures it stacks below content */
+    clear: both; /* Prevents floating issues */
+}
+
+    .sponsor-logos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem; /* Adds spacing between sponsor logos */
+        margin-top: 1rem;
+    }
+
+    .disclaimer {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+}

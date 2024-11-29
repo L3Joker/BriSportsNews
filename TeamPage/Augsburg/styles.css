@@ -1,7 +1,10 @@
 /* Split Page Layout */
 .split-page {
     display: flex;
+	justify-content: space-between;
+	gap: 1rem;
     height: 100vh;
+	flex-direction: row;
 }
 
 /* Left Side: Carousel */
@@ -119,5 +122,51 @@
     .container {
         transform: scale(0.7); /* Scale content for shorter screens */
         transform-origin: top center; /* Anchor the scaling */
+    }
+}
+}
+
+/* Adjust layout for mobile screens */
+@media (max-width: 768px) {
+    .split-page {
+        flex-direction: column; /* Stack the sides vertically */
+        height: auto; /* Let it expand naturally */
+    }
+
+    .left-side,
+    .right-side {
+        flex: none; /* Reset flex properties */
+        width: 100%; /* Full width for both sections */
+        height: auto; /* Auto height for better fit */
+    }
+
+    .right-side {
+        margin-top: 1rem; /* Add some space between the two sections */
+        padding: 1rem; /* Maintain padding for consistency */
+    }
+}
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+    .split-page {
+		display: block;
+        flex-direction: column; /* Stack sections vertically */
+        gap: 2rem; /* Add spacing between sections */
+    }
+
+    .right-side {
+        margin: 0; /* Reset margins */
+        padding-bottom: 2rem; /* Add spacing below the dynamic content */
+    }
+
+    .sponsor-section {
+        margin-top: 2rem; /* Ensure spacing above sponsors section */
+        clear: both; /* Prevent any floats from affecting this section */
+    }
+
+    .sponsor-logos {
+        display: flex;
+        flex-wrap: wrap; /* Make sponsor logos responsive */
+        justify-content: center; /* Center-align logos */
+        gap: 1rem; /* Add spacing between logos */
     }
 }
