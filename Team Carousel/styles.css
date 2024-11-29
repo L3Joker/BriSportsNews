@@ -260,3 +260,32 @@ body {
 .team-page-button:hover {
     background-color: #0056b3;
 }
+@media (max-width: 768px) {
+	.carousel {
+    max-width: 100%; /* Ensure carousel stays within the viewport */
+    overflow: hidden;
+    margin: 0 auto; /* Center the carousel */
+}
+.carousel__inner {
+    max-width: 640px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    aspect-ratio: 640 / 480;
+    position: relative;
+}
+@media (max-width: 768px) {
+	.carousel__item {
+        display: flex; /* Ensures flex behavior */
+        justify-content: center; /* Centers horizontally */
+        align-items: center; /* Centers vertically */
+    }
+	
+    .carousel__item img {
+        width: 100%; /* Adjust the percentage to control width */
+        height: auto; /* Maintain aspect ratio */
+        max-width: 250px; /* Limit the maximum width for small screens */
+        max-height: 350px; /* Limit the maximum height for small screens */
+    }
+}
