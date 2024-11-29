@@ -9,47 +9,30 @@
     </head>     
     <body> 
         <!-- Top Banner -->         
-        <header class="top-banner">
-            <div class="logo">BriSports News</div>
-            <nav class="navbar">
-                <button class="hamburger" aria-label="Toggle navigation">
-                    ☰
-</button>
-                <ul class="nav-links">
-                    <li>
-                        <a href="index.html">Season Updates</a>
-                    </li>
-                    <li>
-                        <a href="brible.html">Brible</a>
-                    </li>
-                    <li>
-                        <a href="standings.html" class="current">Standings</a>
-                    </li>
-                    <li>
-                        <a href="teams.html">Teams</a>
-                    </li>
-                </ul>
-            </nav>
+        <header class="top-banner"> 
+            <div class="logo">BriSports News</div>             
+            <nav class="nav-links"> <a href="index.html">Season Updates</a> <a href="brible.html">Brible</a> <a href="standings.html" class="active">Standings</a> <a href="teams.html">Teams</a> 
+            </nav>             
         </header>         
         <!-- Main Content -->         
         <main class="standings-content"> 
             <section class="season-overview"> 
-                <h1><a href="2024-25.html" class="season-link">2024/25</a></h1> 
+                <h1><a href="2023-24.html" class="season-link">2024/25</a></h1> 
                 <div class="top-three-container"> 
                     <div class="top-team"> 
                         <h2>1st</h2> 
                         <p>Augsburg</p> 
-                        <p>85 Points</p> 
+                        <p>78 Points</p> 
                     </div>                     
                     <div class="top-team"> 
                         <h2>2nd</h2> 
                         <p>SV Werder</p> 
-                        <p>83 Points</p> 
+                        <p>75 Points</p> 
                     </div>                     
                     <div class="top-team"> 
                         <h2>3rd</h2> 
                         <p>Mainz 05</p> 
-                        <p>79 Points</p> 
+                        <p>73 Points</p> 
                     </div>                     
                 </div>                 
                 <h1><a href="2023-24.html" class="season-link">2023/24</a></h1> 
@@ -81,21 +64,11 @@
                 <img src="whitegummy.png" alt="WHITE GUMMY"> 
                 <img src="wingfest.png" alt="WingFest"> 
             </div>             
-            <p class="disclaimer"> <strong>Disclaimer:</strong> The sponsors displayed on this website are purely fictional and included for comedic purposes only. BriSports News is not affiliated with any of these brands, and their logos and names are used in a non-commercial, satirical context. No endorsement, partnership, or sponsorship is implied. Please enjoy the humor responsibly! </p> 
+            <p class="disclaimer">  <strong>Disclaimer:</strong> The sponsors displayed on this website are purely fictional and included for comedic purposes only. BriSports News is not affiliated with any of these brands, and their logos and names are used in a non-commercial, satirical context. No endorsement, partnership, or sponsorship is implied. Please enjoy the humor responsibly! </p> 
         </section>         
         <!-- Footer -->         
         <footer> 
             <p>&copy; 2024 BriSports News | Inspired by Sky Sports</p> 
-        </footer>
-        <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const hamburger = document.querySelector(".hamburger");
-        const navLinks = document.querySelector(".nav-links");
-        // Toggle the 'active' class on the nav-links
-        hamburger.addEventListener("click", () => {
-            navLinks.classList.toggle("active");
-        });
-    });
-</script>         
+        </footer>         
     </body>     
 </html>

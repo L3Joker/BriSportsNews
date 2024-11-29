@@ -52,25 +52,8 @@ body {
 }
 
 .top-banner .nav-links {
-    display: flex;
-    gap: 2rem; /* Adjust spacing between links */
-}
-
-.top-banner .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: opacity 0.3s;
-}
-
-.top-banner .nav-links a:hover {
-    opacity: 0.7;
-}
-
-.nav-links .active {
-    color: #ffa500; /* Highlighted color (orange) */
-    font-weight: bold;
-    text-decoration: underline; /* Optional: adds an underline */
+    display: flex; /* Visible on larger screens */
+    gap: 2rem; /* Spacing between links */
 }
 
 /* Latest Update Section */
@@ -757,5 +740,90 @@ tbody tr:nth-child(18) { /* 16th, 17th, 18th positions - red for relegation */
     .container {
         transform: scale(0.7); /* Scale content for shorter screens */
         transform-origin: top center; /* Anchor the scaling */
+    }
+}
+@media only screen and (max-width: 375px) and (max-height: 812px) {
+    /* Add your custom styles here for iPhone X/XS */
+    .header {
+        font-size: 1.5em; /* Adjust header font size */
+        text-align: center;
+    }
+
+    .update-preview {
+        padding: 10px; /* Add padding for better spacing */
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    .update-preview img {
+        max-width: 100%; /* Make the image scale properly */
+        height: auto;
+    }
+
+    .read-more-btn {
+        font-size: 0.8rem; /* Shrink the button text */
+        padding: 5px 10px;
+    }
+}
+/* Default navbar for larger screens */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Hide hamburger menu by default */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+}
+
+/* Responsive styles for smaller screens */
+/* For smaller screens: Hide by default */
+@media (max-width: 768px) {
+    .top-banner .nav-links {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: #d71920;
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 10;
+    }
+
+    .top-banner .nav-links.active {
+        display: flex; /* Show when active */
+    }
+
+    .top-banner .hamburger {
+        display: block; /* Show hamburger on smaller screens */
+    }
+}
+.nav-links .current {
+    font-weight: bold;
+    text-decoration: underline;
+}
+/* For larger screens: Hide the hamburger button */
+@media (min-width: 769px) {
+    .top-banner .hamburger {
+        display: none;
     }
 }
