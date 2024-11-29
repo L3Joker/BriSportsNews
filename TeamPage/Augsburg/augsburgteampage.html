@@ -1,0 +1,70 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Augsburg Team Page</title>         
+        <link href="../css/theme.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="styles.css"> 
+    </head>     
+    <body> 
+        <header class="top-banner">
+            <link rel="stylesheet" href="../../styles.css">
+            <div class="logo">BriSports News</div>             
+            <nav class="nav-links"> <a href="../../index.html" class="active">Season Updates</a> <a href="../../brible.html">Brible</a> <a href="../../standings.html">Standings</a> <a href="../teams.html">Teams</a> 
+            </nav>             
+        </header>
+        <div class="split-page"> 
+            <!-- Left Side: Carousel -->             
+            <div class="left-side"> 
+                <div id="carousel" class="carousel"> 
+                    <div class="carousel__inner"> 
+                        <div class="carousel__item carousel--active"> 
+                            <img src="../../augsburg.png" alt="AUGSBURG"> 
+                        </div>                         
+                        <div class="carousel__item"> 
+                            <img src="managerbri.jpg" alt="Manager Brierley"> 
+                        </div>                         
+                        <div class="carousel__item"> 
+                            <img src="brilineup.png" alt="Formation"> 
+                        </div>                         
+                        <div class="carousel__item"> 
+                            <img src="augsburgbesteleven.png" alt="Best Eleven"> 
+                        </div>                         
+                    </div>                     
+                    <button class="carousel__prev">❮</button>                     
+                    <button class="carousel__next">❯</button>                     
+                </div>                 
+            </div>             
+            <!-- Right Side: Dynamic Content -->             
+            <div class="right-side"> 
+                <div id="dynamic-content"> 
+                    <h1>Team Info</h1> 
+                    <p>Select a team from the carousel to see details.</p> 
+                </div>                 
+            </div>             
+        </div>         
+        <script src="carousel.js"></script>         
+        <script src="dynamic.js"></script>         
+        <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const { onNavigate } = setupDotsPagination('dots');
+        setupCarousel('carousel', onNavigate);
+    });
+</script>
+        <section class="sponsor-section">
+            <link rel="stylesheet" href="../../styles.css"> 
+            <h2>Our Sponsors</h2> 
+            <div class="sponsor-logos"> 
+                <img src="../../guinness.png" alt="GUINNESS"> 
+                <img src="../../rollbit.png" alt="Sponsor 2"> 
+                <img src="../../whitegummy.png" alt="WHITE GUMMY"> 
+                <img src="../../wingfest.png" alt="WingFest"> 
+            </div>             
+            <p class="disclaimer"> <strong>Disclaimer:</strong> The sponsors displayed on this website are purely fictional and included for comedic purposes only. BriSports News is not affiliated with any of these brands, and their logos and names are used in a non-commercial, satirical context. No endorsement, partnership, or sponsorship is implied. Please enjoy the humor responsibly! </p> 
+        </section>
+        <footer> 
+            <p>&copy; 2024 BriSports News | Inspired by Sky Sports</p> 
+        </footer>         
+    </body>
+</html>

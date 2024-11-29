@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Augsburg Team Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="split-page">
+        <!-- Left Side: Carousel -->
+        <div class="left-side">
+    <div id="carousel" class="carousel">
+        <div class="carousel__inner">
+            <div class="carousel__item carousel--active">
+                <img src="../augsburg.png" alt="AUGSBURG">
+            </div>
+            <div class="carousel__item">
+                <img src="managerbri.jpg" alt="Manager Brierley">
+            </div>
+            <div class="carousel__item">
+                <img src="brilineup.png" alt="Formation">
+            </div>
+			<div class="carousel__item">
+                <img src="augsburgbesteleven.png" alt="Best Eleven">
+            </div>
+        </div>
+        <button class="carousel__prev">❮</button>
+        <button class="carousel__next">❯</button>
+    </div>
+</div>
+
+
+        <!-- Right Side: Dynamic Content -->
+        <div class="right-side">
+            <div id="dynamic-content">
+                <h1>Team Info</h1>
+                <p>Select a team from the carousel to see details.</p>
+            </div>
+        </div>
+    </div>
+    <script src="carousel.js"></script>
+    <script src="dynamic.js"></script>
+	<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const { onNavigate } = setupDotsPagination('dots');
+        setupCarousel('carousel', onNavigate);
+    });
+</script>
+</body>
+</html>

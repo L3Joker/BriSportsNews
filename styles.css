@@ -738,3 +738,24 @@ tbody tr:nth-child(18) { /* 16th, 17th, 18th positions - red for relegation */
     margin-top: 0.5rem;
     font-style: italic;
 }
+/* Default styles (apply to all screen sizes) */
+.container {
+    width: 100%;
+    height: auto;
+}
+
+/* Media Query for smaller screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .container {
+        transform: scale(0.8); /* Scale content for smaller screens */
+        transform-origin: top center; /* Anchor the scaling */
+    }
+}
+
+/* Media Query for shorter screens (max-height: 500px) */
+@media (max-height: 500px) {
+    .container {
+        transform: scale(0.7); /* Scale content for shorter screens */
+        transform-origin: top center; /* Anchor the scaling */
+    }
+}
