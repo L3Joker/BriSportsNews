@@ -6,27 +6,33 @@
     height: 100vh;
 	flex-direction: row;
 }
+/* Modal Overlay */
 .modal {
-    display: none;
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Darker overlay for focus */
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
     justify-content: center;
     align-items: center;
     z-index: 1000;
 }
 
 .modal-content {
-    background: #fff;
+    background: var(--card-color);
     padding: 20px;
-    border-radius: 8px;
-    max-width: 600px;
+    border-radius: 15px;
     width: 90%;
-    position: relative;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    max-width: 650px;
+    box-shadow: 0 15px 30px rgba(58, 20, 31, 0.2);
+    z-index: 1001;
+}
+
+/* Disable Scroll on Body */
+body.modal-open {
+    overflow: hidden;
 }
 
 .close-button {
