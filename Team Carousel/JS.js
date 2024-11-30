@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const teamPages = {
     "AUGSBURG": "./TeamPage/Augsburg/augsburgteampage.html", // Adjusted for base URL
     "MAINZ05": "./TeamPage/Mainz/mainzteampage.html",
-    "WERDER": "./TeamPage/Werder/werderteampage.html",
+    "WERDER": "./TeamPage/SVWerder/werderteampage.html",
 };
 
     const updateButton = () => {
