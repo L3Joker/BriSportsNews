@@ -151,19 +151,19 @@ document.addEventListener('DOMContentLoaded', () => {
 };
 
     const updateButton = () => {
-        const activeImage = document.querySelector('.carousel__item.carousel--active img');
-        if (activeImage) {
-            const altText = activeImage.alt.toUpperCase();
-            const targetPage = teamPages[altText];
-            if (targetPage) {
-                visitTeamPageButton.onclick = () => {
-                    window.location.href = targetPage;
-                };
-            } else {
-                visitTeamPageButton.onclick = null;
-            }
+    const activeImage = document.querySelector('.carousel__item.carousel--active img');
+    if (activeImage) {
+        const altText = activeImage.alt.toUpperCase();
+        const targetPage = teamPages[altText];
+        if (targetPage) {
+            visitTeamPageButton.onclick = () => {
+                window.location.href = targetPage;
+            };
+        } else {
+            visitTeamPageButton.onclick = null;
         }
-    };
+    }
+};
 
     // Update button initially
     updateButton();
