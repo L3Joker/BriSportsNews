@@ -1,0 +1,152 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Mainz 05 Team Page</title>         
+        <link href="../../css/theme.css" rel="stylesheet" type="text/css"> 
+        <link href="../css/theme.css" rel="stylesheet" type="text/css"> 
+        <link rel="stylesheet" href="styles.css"> 
+    </head>     
+    <body> 
+        <header class="top-banner"> 
+            <div class="logo">BriSports News</div>             
+            <nav class="navbar"> 
+                <link rel="stylesheet" href="../../styles.css"> 
+                <button class="hamburger" aria-label="Toggle navigation"> 
+                    ☰
+</button>                 
+                <ul class="nav-links"> 
+                    <li> <a href="../../index.html">Season Updates</a> 
+                    </li>                     
+                    <li> <a href="../../brible.html">Brible</a> 
+                    </li>                     
+                    <li> <a href="../../standings.html">Standings</a> 
+                    </li>                     
+                    <li> <a href="../../teams.html" class="current">Teams</a> 
+                    </li>                     
+                </ul>                 
+            </nav>             
+        </header>         
+        <div class="split-page"> 
+            <!-- Left Side: Carousel -->             
+            <div class="left-side"> 
+                <div id="carousel" class="carousel"> 
+                    <div class="carousel__inner"> 
+                        <div class="carousel__item carousel--active"> 
+                            <img src="../../mainz05.webp" alt="Mainz05"> 
+                        </div>                         
+                        <div class="carousel__item"> 
+                            <img src="managerjames.jpg" alt="Manager Devine"> 
+                        </div>                         
+                        <div class="carousel__item"> 
+                            <img src="mainz05lineup.png" alt="Formation"> 
+                        </div>                         
+                        <div class="carousel__item"> 
+                            <img src="mainz05besteleven.png" alt="Best Eleven"> 
+                        </div>                         
+                    </div>                     
+                    <button class="carousel__prev">❮</button>                     
+                    <button class="carousel__next">❯</button>                     
+                </div>                 
+            </div>             
+            <!-- Right Side: Dynamic Content -->             
+            <div class="right-side"> 
+                <div id="dynamic-content"> 
+                    <h1>Team Info</h1> 
+                    <p>Select a team from the carousel to see details.</p> 
+                </div>                 
+            </div>             
+            <div id="player-stats-modal" class="modal"> 
+                <div class="modal-content"> 
+                    <button id="close-modal" class="close-button">X</button>                     
+                    <div id="player-stats-container"> 
+                        <!-- Content from playerstats.html will be loaded here -->                         
+                    </div>                     
+                </div>                 
+            </div>             
+        </div>         
+        <script src="carousel.js"></script>         
+        <script src="dynamic.js"></script>         
+        <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const { onNavigate } = setupDotsPagination('dots');
+        setupCarousel('carousel', onNavigate);
+    });
+</script>         
+        <section class="sponsor-section"> 
+            <!--<link rel="stylesheet" href="../../styles.css"> -->             
+            <h2>Our Sponsors</h2> 
+            <div class="sponsor-logos"> 
+                <img src="../../guinness.png" alt="GUINNESS" class="sponsor-logo" data-image="../../guinness.png"> 
+                <img src="../../rollbit.png" alt="Sponsor 2" class="sponsor-logo" data-image="../../rollbit.png"> 
+                <img src="../../whitegummy.png" alt="WHITE GUMMY" class="sponsor-logo" data-image="../../whitegummy.png"> 
+                <img src="../../wingfest.png" alt="WingFest" class="sponsor-logo" data-image="../../wingfest.png"> 
+            </div>             
+            <p class="disclaimer"> <strong>Disclaimer:</strong> The sponsors displayed on this website are purely fictional and included for comedic purposes only. BriSports News is not affiliated with any of these brands, and their logos and names are used in a non-commercial, satirical context. No endorsement, partnership, or sponsorship is implied. Please enjoy the humor responsibly! </p> 
+        </section>         
+        <!-- Modal -->         
+        <div id="sponsor-modal" class="modal"> 
+            <div class="modal-content"> 
+                <img id="modal-image" src="" alt="Sponsor Image"> 
+            </div>             
+        </div>         
+        <footer> 
+            <p>&copy; 2024 BriSports News | Inspired by Sky Sports</p> 
+        </footer>         
+        <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+        // Toggle the 'active' class on the nav-links
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    });
+</script>         
+        <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('player-stats-modal');
+    const modalContent = document.getElementById('player-stats-container');
+    const closeModal = document.getElementById('close-modal');
+    const dynamicContent = document.getElementById('dynamic-content'); // Parent container for dynamic content
+
+    // Use event delegation to handle dynamically added buttons
+    dynamicContent.addEventListener('click', async (event) => {
+        if (event.target.classList.contains('player-link')) {
+            event.preventDefault(); // Prevent any default behavior
+            
+            const url = event.target.getAttribute('data-url'); // Get the data-url attribute
+            
+            try {
+                const response = await fetch(url);
+                const html = await response.text();
+
+                // Inject the fetched HTML into the modal
+                modalContent.innerHTML = html;
+
+                // Display the modal
+                modal.style.display = 'flex';
+            } catch (error) {
+                console.error('Error loading content:', error);
+                modalContent.innerHTML = '<p>Error loading player stats. Please try again later.</p>';
+                modal.style.display = 'flex';
+            }
+        }
+    });
+
+    // Close the modal
+    closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    // Close modal when clicking outside the content
+    modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
+</script>         
+    </body>     
+</html>

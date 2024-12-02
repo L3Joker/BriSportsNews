@@ -1,0 +1,97 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+:root {
+    --canvas-color: #FFFFFF; /* White for the main background */
+    --card-color: #FFDDDD; /* Light red for cards */
+    --accent-color: #E60000; /* Mainz 05's signature red */
+    --primary-text-color: #A80000; /* Dark red for primary text */
+    --primary-text-color-light: #FF8080; /* Lighter red for highlights */
+    --secondary-text-color: #FFFFFF; /* Grey for subtle accents */
+}
+
+body {
+    font-family: "DM Sans", "Inter", sans-serif;
+    background-color: var(--canvas-color);
+    margin: 0;
+    padding: 0;
+    height: auto; /* Reset height */
+}
+
+.container {
+    width: 100%; /* Ensure the container fits the viewport width */
+    padding: 15px; /* Add some padding */
+}
+
+.player {
+    width: 100%; /* Full width for small screens */
+    max-width: 375px; /* Ensure it doesn’t exceed the phone screen width */
+    background-color: var(--card-color);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.player-image {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 10px;
+}
+
+.player-image img {
+    width: 100%; /* Make the image responsive */
+    height: auto;
+    border-radius: 8px;
+}
+
+.player-team {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-text-color-light);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 5px; /* Add a small margin between the team and player name */
+    display: block; /* Ensure it's on its own line */
+}
+
+.player-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-text-color);
+    text-align: center;
+    margin-bottom: 15px; /* Add spacing below the player name */
+    display: block; /* Ensure it's on its own line */
+}
+
+.player-stats {
+    display: flex;
+    flex-wrap: wrap; /* Wrap stats if needed */
+    justify-content: space-between;
+    width: 100%; /* Full width */
+    background-color: var(--accent-color);
+    border-radius: 10px;
+    padding: 10px;
+    color: var(--secondary-text-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.player-stat {
+    font-size: 0.8rem;
+    text-align: center;
+    flex: 1 0 30%; /* Each stat takes up 30% of the width */
+    margin-bottom: 10px;
+}
+
+.player-stat-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 5px;
+    color: var(--secondary-text-color);
+}

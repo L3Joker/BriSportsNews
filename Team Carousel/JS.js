@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const visitTeamPageButton = document.getElementById('visit-team-page');
 	const teamPages = {
     "AUGSBURG": "./TeamPage/Augsburg/augsburgteampage.html", // Adjusted for base URL
-    "MAINZ05": "./TeamPage/Mainz/mainzteampage.html",
+    "MAINZ05": "./TeamPage/Mainz05/mainz05teampage.html",
     "SVWERDER": "./TeamPage/SV Werder/werderteampage.html",
 };
 
